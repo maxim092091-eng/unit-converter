@@ -83,29 +83,32 @@ http://127.0.0.1:5000
 
 ## Project Structure
 
+```text
 unit-converter/
 ├── src/
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── converter.py
-│   ├── templates/
-│   │   └── index.html
-│   └── static/
-│       ├── css/
-│       │   └── style.css
-│       ├── fonts/
-│       │   ├── Inter-VariableFont_opsz,wght.ttf
-│       │   └── OFL(Inter).txt
-│       └── js/
-│           └── script.js
+│   └── unit_converter/
+│       ├── __init__.py
+│       ├── routes.py
+│       ├── converter.py
+│       ├── templates/
+│       │   └── index.html
+│       └── static/
+│           ├── css/
+│           │   └── style.css
+│           ├── fonts/
+│           │   ├── Inter-VariableFont_opsz,wght.ttf
+│           │   └── OFL(Inter).txt
+│           └── js/
+│               └── script.js
 ├── tests/
 │   └── test_unit_converter.py
 ├── .gitignore
 ├── LICENSE
 ├── pyproject.toml
 └── README.md
+```
 
-## Testing
+## Test
 
 Run the tests with:
 
