@@ -67,7 +67,7 @@ python -m pip install -e .
 Start the application:
 
 ```bash
-flask --app app run
+flask --app "unit_converter:create_app" run
 ```
 
 Open the application in your browser:
