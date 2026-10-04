@@ -16,9 +16,12 @@ Unit Converter is a web application for converting between different units of me
 
 ### Clone the repository
 
-git clone <repository-url> 
+```bash
+git clone https://github.com/maxim092091-eng/unit-converter.git
+``` 
 
 ### Navigate to the project directory
+
 ```bash
 cd unit-converter
 ``` 
