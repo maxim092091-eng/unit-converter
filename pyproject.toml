@@ -1,0 +1,17 @@
+[project]
+name = "unit-converter"
+version = "1.0.0"
+description = "Unit Converter is a web application for converting between different units of measurement."
+requires-python = ">=3.10"
+dependencies = [
+    "flask",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest",
+]

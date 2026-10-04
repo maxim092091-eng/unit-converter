@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Unit Converter</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Unit Converter</h1>
+    </header>
+    <main>
+      {% if result is not none or error %} {% if error %}
+      <p>{{ error }}</p>
+      {% else %}
+      <p>Result of your calculation<br />{{ result }}</p>
+      {% endif %}
+
+      <a href="{{ url_for('main.index') }}" class="form-element form-button"
+        >Reset</a
+      >
+
+      {% else %}
+      <form action="{{ url_for('main.convert_units') }}" method="POST">
+        <div id="unit">
+          <label class="radio-label">
+            <input type="radio" name="type" value="length" checked />
+            Length
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="type" value="weight" />
+            Weight
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="type" value="temperature" />
+            Temperature
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label id="unit-text" for="value">Enter the length to convert </label>
+          <input type="text" id="value" name="value" class="form-element" />
+
+          <label for="from">Unit to convert from</label>
+          <input type="text" id="from" name="from" class="form-element" />
+
+          <label for="to">Unit to convert to</label>
+          <input type="text" id="to" name="to" class="form-element" />
+
+          <button type="submit" class="form-element form-button">
+            Convert
+          </button>
+        </div>
+      </form>
+      <details>
+        <summary class="available-types">Available types</summary>
+        <p>
+          Length: millimeter (mm), centimeter (cm), meter (m), kilometer (km),
+          inch (in), foot (ft), yard (yd), mile (mi).
+        </p>
+        <p>
+          Weight: milligram (mg), gram (g), kilogram (kg), ounce (oz), pound
+          (lb).
+        </p>
+        <p>Temperature: Celsius (C), Fahrenheit (F), Kelvin (K).</p>
+      </details>
+      {% endif %}
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

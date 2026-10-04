@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+#unit {
+  display: flex;
+
+  gap: 10px;
+  margin-bottom: 21px;
+}
+
+.radio-label:has(input:checked) {
+  color: #0205a3;
+
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.radio-label:hover {
+  color: #0205a3;
+
+  cursor: pointer;
+}
+
+.radio-label input {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 300px;
+  gap: 10px;
+}
+
+#unit-text {
+  white-space: nowrap;
+}
+
+.form-element {
+  width: 200px;
+  height: 20px;
+
+  background: transparent;
+
+  border-radius: 5px;
+  border: 2px solid #000000;
+}
+
+.form-button {
+  width: 120px;
+  height: 30px;
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+
+  padding: 0;
+}
+
+.form-button:hover {
+  border: 2px solid #0205a3;
+  color: #0205a3;
+
+  cursor: pointer;
+}
+
+.available-types {
+  margin-top: 20px;
+
+  cursor: pointer;
+}
+
+.available-types:hover {
+  color: #0205a3;
+}
