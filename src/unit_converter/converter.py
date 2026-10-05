@@ -55,7 +55,7 @@ unit_types = {
 }
 
 
-def is_valid_unit_system(unit_type, from_unit, to_unit):
+def is_valid_unit_system(unit_type: str, from_unit: str, to_unit: str) -> None:
     if "" in (from_unit, to_unit):
         raise ValueError("Enter units of measurement.")
 
@@ -72,7 +72,7 @@ def is_valid_unit_system(unit_type, from_unit, to_unit):
         )
 
 
-def convert(unit_type, value, from_unit, to_unit):
+def convert(unit_type: str, value: str, from_unit: str, to_unit: str) -> str:
     if not value:
         raise ValueError("Enter number")
 
@@ -104,16 +104,16 @@ def convert(unit_type, value, from_unit, to_unit):
     return f"{formatted_value} = {formatted_result}"
 
 
-def length_convert(value, from_unit, to_unit):
+def length_convert(value: float, from_unit: str, to_unit: str) -> float:
     value_in_meters = value * length_units[from_unit]
     return value_in_meters / length_units[to_unit]
 
 
-def weight_convert(value, from_unit, to_unit):
+def weight_convert(value: float, from_unit: str, to_unit: str) -> float:
     value_in_kilogram = value * weight_units[from_unit]
     return value_in_kilogram / weight_units[to_unit]
 
 
-def temperature_convert(value, from_unit, to_unit):
+def temperature_convert(value: float, from_unit: str, to_unit: str) -> float:
     value_in_celsius = to_celsius[from_unit](value)
     return from_celsius[to_unit](value_in_celsius)

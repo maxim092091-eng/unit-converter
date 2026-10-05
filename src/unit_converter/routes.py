@@ -6,12 +6,12 @@ main = Blueprint("main", __name__)
 
 
 @main.route("/")
-def index():
+def index() -> str:
     return render_template("index.html", result=None, error=None)
 
 
 @main.route("/convert", methods=["POST"])
-def convert_units():
+def convert_units() -> str:
     result = None
     error = None
 
