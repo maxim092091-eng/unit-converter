@@ -12,6 +12,12 @@ Unit Converter is a web application for converting between different units of me
 - Python 3.10+
 - A modern web browser
 
+## Technologies
+
+- **Backend:** Python, Flask
+- **Frontend:** HTML, CSS, JavaScript
+- **Testing:** pytest
+
 ## Installation
 
 ### Clone the repository
@@ -57,7 +63,7 @@ source .venv/bin/activate
 ### Install the project:
 
 ```bash
-python -m pip install -e .
+python -m pip install .
 ```
 
 ## Usage
@@ -115,12 +121,6 @@ Run the tests with:
 ```bash
 pytest
 ```
-
-## Technologies
-
-- **Backend:** Python, Flask
-- **Frontend:** HTML, CSS, JavaScript
-- **Testing:** pytest
 
 ## Project
 
