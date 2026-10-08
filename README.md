@@ -60,7 +60,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### Install the project:
+### Install the project
 
 ```bash
 python -m pip install .
